@@ -1,0 +1,11 @@
+{
+  "name": "Rocketseat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "node": "cd backend && yarn start",
+    "react": "cd frontend && yarn start",
+    "start": "cd frontend && yarn start && cd .. && cd backend && yarn start"
+  },
+  "license": "MIT"
+}

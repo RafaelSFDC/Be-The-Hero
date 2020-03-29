@@ -5,7 +5,8 @@
   "scripts": {
     "back": "cd backend && yarn start",
     "front": "cd frontend && yarn start",
-    "start": "cd frontend && yarn start && cd .. && cd backend && yarn start"
+    "start": "cd frontend && yarn start && cd .. && cd backend && yarn start",
+    "mobile": "cd mobile"
   },
   "license": "MIT"
 }

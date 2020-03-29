@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+
+//---------------Variables---------------
+$background-color: #F0F0F5;
+$font: Roboto;
+$base: 14px;
+$button: 18px;
+$base-color: #e02041;
+$base-color-weak: #e020405e;
+$secondary-color: white;
+
+
+
+//---------------Reset Css---------------
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+//---------------Global Style---------------
+body{
+  font: 400 $base $font, sans-serif;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea{
+  font: 400 $button $font, sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+form input{
+  width: 100%;
+  height: 60px;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+
+form textarea{
+  width: 100%;
+  min-height: 140px;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 16px 24px;
+  line-height: 24px;
+  resize: vertical;
+}
+
+form textarea:hover,
+form textarea:focus,
+form input:hover,
+form input:focus{
+  border-color: $base-color-weak;
+}
+
+.button{
+  width: 100%;
+  height: 60%;
+  background: $base-color;
+  border: 0;
+  border-radius: 8px;
+  color: $secondary-color;
+  font-weight: bold;
+  margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  transition: 0.3s;
+}
+
+.button:hover{
+  filter: brightness(90%)
+}
+
+.back-link{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  color: #41414d;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+
+  svg{
+    margin-right: 8px;
+  }
+}
+
+.back-link:hover{
+  opacity: 0.8;
+}
+
+
+
+//---------------Login Style---------------
+.login-container{
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  section.form{
+    width: 100%;
+    max-width: 350px;
+    margin-right: 30px;
+
+    form{
+      margin-top: 100px;
+
+      h1{
+        font-size: 32px;
+        margin-bottom: 32px;
+      }
+      
+      input{
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}
+
+
+
+//---------------Register and NewIncident Style---------------
+.container-container{
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content{
+    width: 100%;
+    padding: 96px;
+    background-color: $background-color;
+    box-shadow: 0 0  100px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    section{
+      width: 100%;
+      max-width: 380px;
+
+      h1{
+        margin: 64px 0 32px;
+        font-size: 32px;
+      }
+
+      p{
+        font-size: 18px;
+        color: #747480;
+        line-height: 32px;
+      }
+    }
+
+
+    form{
+      width: 100%;
+      max-width: 450px;
+
+      input, textarea{
+        margin-top: 8px;
+      }
+    }
+  }
+
+}
+
+
+
+//---------------Register Style---------------
+.register-container{
+  
+      .input-group{
+        display: flex;
+      }
+      .input-group input + input {
+        margin-left: 8px;
+      }
+}
+
+
+
+//---------------Profile Style---------------
+.profile-container{
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+
+  header{
+    display: flex;
+    align-items: center;
+
+    span{
+      font-size: 20px;
+      margin-left: 24px;
+    }
+
+    img{
+      height: 64px;
+    }
+
+    a {
+      width: 260px;
+      margin-left: auto;
+      margin-top: 0;
+    }
+
+    button{
+      height: 60px;
+      width: 60px;
+      border-radius: 4px;
+      border: 1px solid #DCDCE6;
+      margin-left: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover{
+      border-color: #999;
+    }
+  }
+
+
+  h1{
+    margin-top: 80px;
+    margin-bottom: 24px;
+  }
+
+
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    list-style: none;
+
+    li{
+      background-color: $secondary-color;
+      padding: 24px;
+      border-radius: 8px;
+      position: relative;
+
+      button{
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        border: 0;
+        transition: 0.3s;
+        background-color: transparent;
+      }
+
+      button:hover{
+        opacity: 0.8;
+      }
+
+      strong{
+        display: block;
+        margin-bottom: 16px;
+        color: #41414D;
+      }
+      p + strong {
+        margin-top: 32px;
+      }
+
+      p{
+        color: #737380;
+        line-height: 31px;
+        font-size: 16px;
+      }
+    }
+  }
+
+
+}
